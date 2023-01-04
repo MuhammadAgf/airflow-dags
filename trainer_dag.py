@@ -20,7 +20,7 @@ default_args = {
 secret_volume = Secret(
     deploy_type="volume",
     deploy_target="/var/secrets/google",
-    secret="google-cloud-keys",
+    secret="google-app-key",
     key="secret.json",
 )
 
