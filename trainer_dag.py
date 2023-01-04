@@ -24,7 +24,11 @@ secret_volume = Secret(
     key="secret.json",
 )
 
-dag = DAG('kubernetes_trainer', default_args=default_args, schedule_interval="0 0 * * *", schedule_interval=timedelta(minutes=1))
+dag = DAG(
+    'kubernetes_trainer',
+    default_args=default_args,
+    schedule_interval="0 0 * * *"
+)
 
 
 start = DummyOperator(task_id='start', dag=dag)
